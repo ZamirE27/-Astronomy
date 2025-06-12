@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    font-family: "Bebas Neue", sans-serif;
+    color: white;
+    background-color: #04060a;
+    
+}
+.header{
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    font-size: 2vh;
+}
+.top_header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem 5rem;
+}
+.nav_bar ul{
+    display: flex;
+    flex-wrap: wrap;    
+    gap: 2rem;
+    list-style: none;
+}
+ul a{
+    
+    text-decoration: none;
+    color: white;
+    
+}
+ul a:hover{
+    text-shadow: 0 0 5px rgba(255, 255, 255, 1);
+    transition: text-shadow 0.3s ease; 
+}
+
+#start{
+    background-image: url(/images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100dvh;
+}
+.tittle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+h1{
+    border: 1px solid #1976d2;
+    max-width: 100%;
+    margin: 35vh auto;
+    font-size: 800%;
+    font-weight: 1;
+    width: 80rem;
+    letter-spacing: 10vh;
+    padding: 2rem 4rem;
+}
+
+#about_space{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100dvh;
+    gap: 15rem;
+
+}
+#about_space img{
+    transform: translateY(-45px);
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    -webkit-transform: translateY(-45px);
+    -moz-transform: translateY(-45px);
+    -ms-transform: translateY(-45px);
+    -o-transform: translateY(-45px);
+}
+.card_1{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 2rem;
+    width: 550px;
+    height: 500px;
+    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
+}
+.card_1 h2{
+    font-weight: 100;
+    font-size: 3.5rem;
+    letter-spacing: 1rem;
+}
+.card_1 p{
+    font-size: 19px;
+    
+}
