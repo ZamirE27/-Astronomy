@@ -14,6 +14,7 @@ body{
 }
 .header{
     position: fixed;
+    z-index: 100;
     width: 100%;
     background-color: black;
     font-size: 2vh;
@@ -30,19 +31,19 @@ body{
     gap: 2rem;
     list-style: none;
 }
-ul a{
+a{
     
     text-decoration: none;
     color: white;
     
 }
-ul a:hover{
+a:hover{
     text-shadow: 0 0 5px rgba(255, 255, 255, 1);
     transition: text-shadow 0.3s ease; 
 }
 
 #start{
-    background-image: url(/images/background.jpg);
+    background-image: url(../images/background.jpg);
     background-position: center;
     background-size: cover;
     width: 100%;
@@ -54,16 +55,41 @@ ul a:hover{
     align-items: center;
     text-align: center;
 }
-h1{
+h1 {
+    position: relative;            
     border: 1px solid #1976d2;
     max-width: 100%;
     margin: 35vh auto;
-    font-size: 800%;
-    font-weight: 1;
+    font-size: 8rem;               
+    font-weight: 100;            
     width: 80rem;
-    letter-spacing: 10vh;
+    letter-spacing: 6rem;         
     padding: 2rem 4rem;
+    animation: zoom 3s infinite;
+    overflow: hidden;             
+    text-align: center;
+    color: #fff;
+    }
+
+    h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.6) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg);
+    animation: shine 3s infinite;
+    pointer-events: none;
+    z-index: 1;
 }
+
 
 #about_space{
     display: flex;
@@ -74,16 +100,22 @@ h1{
     gap: 15rem;
 
 }
-#about_space img{
+#about_space .first_img{
     transform: translateY(-45px);
     width: 500px;
     height: 500px;
     object-fit: cover;
+    box-shadow: 0 0 10px rgb(29, 29, 29);
     -webkit-transform: translateY(-45px);
     -moz-transform: translateY(-45px);
     -ms-transform: translateY(-45px);
     -o-transform: translateY(-45px);
 }
+#about_space img:hover {
+    box-shadow: 0 0 20px rgb(189, 184, 184);
+    transition: box-shadow 0.3s ease;
+}
+
 .card_1{
     display: flex;
     flex-direction: column;
@@ -97,7 +129,7 @@ h1{
     -ms-transform: translateY(-20px);
     -o-transform: translateY(-20px);
 }
-.card_1 h2{
+h2{
     font-weight: 100;
     font-size: 3.5rem;
     letter-spacing: 1rem;
@@ -105,4 +137,113 @@ h1{
 .card_1 p{
     font-size: 19px;
     
+}
+
+#about_space_2{
+    width: 100%;
+    height: 100dvh;
+}
+.card_2{
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+.card_2 h2{
+    align-self: center;
+    text-align: center;
+    width: 80%;
+}
+.pictures{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    width: 85%;
+}
+.pictures img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgb(29, 29, 29);
+}
+
+.picture_2{
+    transform: scale(1.3);
+}
+.galaxy_names{
+    display: flex;
+    font-size: 1.8rem;
+    justify-content: space-between;
+    align-self: center;
+    width: 75.5%;
+}
+#contact_us{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    
+    width: 100%;
+    height: 100dvh;
+    
+}
+#contact_us h2{
+    align-content: end;
+    margin-left: 10rem;
+    transform: translateY(120px);
+    width: 30%;
+}
+.card_3{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card_3 img{
+    width: 700px;
+    height: 500px;
+}
+.contact_op{
+    display: flex;
+    font-size: 17px;
+    transform: translateY(180px);
+    gap: 2rem;
+}
+
+.contact_op div{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+.contact_op img{
+    width: 50px;
+    height: 50px;
+}
+.logos{
+    width: 40%;
+    gap: 1rem;
+}
+.options{
+    width: 70%;
+    gap: 3rem;
+    
+}
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); 
+    }
+    100% {
+        transform: scale(1); 
+    }
+}
+@keyframes shine {
+    0% {
+        left: -75%;
+    }
+    100% {
+        left: 112%;
+    }
 }
